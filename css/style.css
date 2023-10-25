@@ -129,11 +129,12 @@ body {
     right: -100%;
     height: 100vh;
     width: 35rem;
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 6rem;
     background-color: rgba(1, 1, 1, 0.8);
     color: #ffffff;
     transition: 0.5s;
     border-left: 1px solid var(--primary);
+    overflow-y: auto;
 }
 
 .shopping-cart.active {
