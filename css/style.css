@@ -524,6 +524,7 @@ footer .credit a {
 .modal-content a {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
     width: 11rem;
     background-color: var(--primary);
