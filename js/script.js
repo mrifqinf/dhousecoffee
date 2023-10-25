@@ -56,6 +56,7 @@ buttonDetails.forEach((btn) => {
         modalDetail.style.display = 'flex';
     }
 })
+
 // JS FOR MODAL ITEM CLICK FOR CLOSE MODAL DETAIL
 document.querySelector('.close-button').onclick = (e) => {
     modalDetail.style.display = 'none';
