@@ -1,6 +1,7 @@
 :root {
     --primary: #B8621B;
     --bg: #010101;
+    --wht: #ffffff;
 }
 
 * {
@@ -75,6 +76,7 @@ body {
 .navbar .navbar-extra a {
     color: #fff;
     margin: 0.5rem;
+    transition: 0.3s;
 }
 
 .navbar .navbar-extra a:hover {
@@ -118,6 +120,59 @@ body {
     font-size: 0.5rem;
     margin-right: 1.5rem;
     color: var(--bg);
+}
+
+/* SHOPPING CART */
+.shopping-cart {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 35rem;
+    padding: 0 1.5rem;
+    background-color: rgba(1, 1, 1, 0.8);
+    color: #ffffff;
+    transition: 0.5s;
+    border-left: 1px solid var(--primary);
+}
+
+.shopping-cart.active {
+    right: 0;
+}
+
+.shopping-cart .cart-items {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--primary);
+    position: relative;
+}
+
+.shopping-cart img {
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.shopping-cart h3 {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.shopping-cart .item-price {
+    font-size: 1rem;
+}
+
+.shopping-cart .remove-items {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.shopping-cart .remove-items:hover {
+    color: var(--primary);
 }
 
 /* HOME SECTION */
@@ -186,12 +241,14 @@ body {
 /* ABOUT SECTION */
 .about,
 .menu,
+.products,
 .contact {
     padding: 7.5rem 7% 1.4rem;
 }
 
 .about h2,
 .menu h2,
+.products h2,
 .contact h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -200,6 +257,7 @@ body {
 
 .about h2 span,
 .menu h2 span,
+.products h2 span,
 .contact h2 span {
     color: var(--primary);
 }
@@ -268,6 +326,62 @@ body {
 
 .menu .row .menu-card .menu-card-title {
     margin: 1rem auto 0.5rem;
+}
+
+/* PRODUCTS SECTION */
+.products .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.products .product-card {
+    text-align: center;
+    border: 1px solid #666666;
+    padding: 2rem;
+}
+
+.products .product-icon {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.products .product-icon a {
+    width: 4rem;
+    height: 4rem;
+    color: #ffffff;
+    margin: 0.3;
+    border: 1px solid #666666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.products .product-icon a:hover {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.products .product-image {
+    padding: 1rem 0;
+}
+
+.products .product-image img {
+    height: 20rem;
+    border-radius: 2rem;
+}
+
+.products .product-content h3 {
+    font-size: 1.5rem;
+}
+
+.products .product-price {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 /* CONTACT SECTION */
@@ -356,6 +470,85 @@ footer .links a {
 footer .credit a {
     color: var(--bg);
     font-weight: 700;
+}
+
+/* MDOAL ITEM DETAILS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 1, 1, 0.8);
+}
+
+.modal-container {
+    position: relative;
+    background-color: #ffffff;
+    color: var(--bg);
+    margin: 15% auto;
+    padding: 1rem;
+    border: 1px solid #666666;
+    width: 70%;
+    animation: twingAnimation 1s;
+    border-radius: 2rem;
+}
+
+.modal-container .close-button {
+    position: absolute;
+    right: 1rem;
+}
+
+.modal-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.modal-content img {
+    height: 17rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+    margin-top: 1rem;
+}
+
+.modal-content a {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 11rem;
+    background-color: var(--primary);
+    color: #ffffff;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-radius: 2rem;
+}
+
+.modal .product-price {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* ANIMATION */
+@keyframes twingAnimation {
+    from {
+        top: -300%;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 /* MEDIA QUERIES */
@@ -447,6 +640,10 @@ footer .credit a {
 
     .contact .row form {
         padding-top: 0;
+    }
+
+    .modal-content {
+        flex-wrap: wrap;
     }
 }
 
