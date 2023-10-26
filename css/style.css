@@ -203,8 +203,8 @@ body {
 .home .content {
     padding: 1.4rem 7%;
     max-width: 60rem;
-    position: sticky;
-    top: 1rem;
+    position: fixed;
+    top: 15rem;
 }
 
 .home .content h1 {
