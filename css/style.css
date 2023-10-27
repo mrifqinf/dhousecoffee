@@ -2,6 +2,7 @@
     --primary: #B8621B;
     --bg: #010101;
     --wht: #ffffff;
+    --grey: #666666;
 }
 
 * {
@@ -20,7 +21,7 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
-    color: #ffffff;
+    color: var(--wht);
 }
 
 /* NAVBAR */
@@ -41,7 +42,7 @@ body {
 .navbar .navbar-logo {
     font-size: 2rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--wht);
     font-style: italic;
 }
 
@@ -50,7 +51,7 @@ body {
 }
 
 .navbar .navbar-nav a {
-    color: #fff;
+    color: var(--wht);
     display: inline-block;
     font-size: 1.2rem;
     margin: 0 1rem;
@@ -74,7 +75,7 @@ body {
 }
 
 .navbar .navbar-extra a {
-    color: #fff;
+    color: var(--wht);
     margin: 0.5rem;
     transition: 0.3s;
 }
@@ -93,7 +94,7 @@ body {
     top: 100%;
     right: 7%;
     margin-top: 0.5rem;
-    background-color: #ffffff;
+    background-color: var(--wht);
     width: 25rem;
     height: 3.5rem;
     display: flex;
@@ -131,7 +132,7 @@ body {
     width: 35rem;
     padding: 0 1.5rem 6rem;
     background-color: rgba(1, 1, 1, 0.8);
-    color: #ffffff;
+    color: var(--wht);
     transition: 0.5s;
     border-left: 1px solid var(--primary);
     overflow-y: auto;
@@ -209,7 +210,7 @@ body {
 
 .home .content h1 {
     font-size: 3.9em;
-    color: #fff;
+    color: var(--wht);
     text-shadow: 1px 1px 3pc rgba(1, 1, 3, 0.5);
     line-height: 1.1;
 }
@@ -232,7 +233,7 @@ body {
     display: inline-block;
     padding: 1rem 3rem;
     font-size: 1.4rem;
-    color: #fff;
+    color: var(--wht);
     background-color: var(--primary);
     border-radius: 0.5rem;
     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
@@ -351,7 +352,8 @@ body {
 
 .products .product-card {
     text-align: center;
-    border: 1px solid #666666;
+    border: 1px solid var(--grey);
+    border-radius: 2rem;
     padding: 2rem;
 }
 
@@ -365,9 +367,9 @@ body {
 .products .product-icon a {
     width: 4rem;
     height: 4rem;
-    color: #ffffff;
-    margin: 0.3;
-    border: 1px solid #666666;
+    color: var(--wht);
+    margin: 0.3rem;
+    border: 1px solid var(--grey);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -398,6 +400,24 @@ body {
 .products .product-price {
     font-size: 1rem;
     font-weight: bold;
+}
+
+.products a {
+    color: var(--wht);
+}
+
+.products a .add-product {
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 2px solid var(--grey);
+    border-radius: 2rem;
+    transition: 0.3s;
+}
+
+.products a .add-product:hover {
+    background-color: var(--grey);
 }
 
 /* CONTACT SECTION */
@@ -433,7 +453,7 @@ body {
     padding: 2rem;
     font-size: 1.7rem;
     background: none;
-    color: #fff;
+    color: var(--wht);
 }
 
 .contact .row form .btn {
@@ -441,7 +461,7 @@ body {
     display: inline-block;
     padding: 1rem 3rem;
     font-size: 1.7rem;
-    color: #fff;
+    color: var(--wht);
     background-color: var(--primary);
     cursor: pointer;
     border-radius: 0.5rem;
@@ -466,7 +486,7 @@ footer .socials {
 }
 
 footer .socials a {
-    color: #fff;
+    color: var(--wht);
     margin: 1rem;
 }
 
@@ -480,7 +500,7 @@ footer .links {
 }
 
 footer .links a {
-    color: #fff;
+    color: var(--wht);
     padding: 0.7rem 1rem;
 }
 
@@ -505,7 +525,7 @@ footer .credit a {
 .modal-container {
     position: relative;
     background-color: rgba(1, 1, 1, 0.8);
-    color: #ffffff;
+    color: var(--wht);
     margin: 15% auto;
     padding: 1rem;
     border: 2px solid var(--primary);
@@ -517,7 +537,7 @@ footer .credit a {
 .modal-container .close-button {
     position: absolute;
     right: 1rem;
-    color: #ffffff;
+    color: var(--wht);
 }
 
 .modal-container .close-button:hover {
@@ -550,7 +570,7 @@ footer .credit a {
     gap: 1rem;
     width: 11rem;
     background-color: var(--primary);
-    color: #ffffff;
+    color: var(--wht);
     margin-top: 1rem;
     padding: 1rem 0;
     border-radius: 2rem;
@@ -601,7 +621,7 @@ footer .credit a {
         position: absolute;
         top: 100%;
         right: -100%;
-        background-color: #fff;
+        background-color: var(--wht);
         width: 30rem;
         height: 100vh;
         transition: 0.5s;
@@ -615,7 +635,7 @@ footer .credit a {
     }
 
     .navbar .navbar-nav a {
-        color: #ffffff;
+        color: var(--wht);
         display: block;
         margin: 1.5rem;
         padding: 0.5rem;
