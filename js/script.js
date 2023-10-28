@@ -61,3 +61,15 @@ buttonDetails.forEach((btn) => {
 document.querySelector('.close-button').onclick = (e) => {
     modalDetail.style.display = 'none';
 }
+
+// JS FOR MODAL ADD PRODUCT CLICK FOR OPEN MODAL ADD PRODUCT
+const modalAdding = document.querySelector('#addproduct-modal');
+const buttonAdding = document.querySelector('.addproduct-modal');
+buttonAdding.onclick = () => {
+    modalAdding.style.display = 'flex';
+}
+
+// JS FOR MODAL ADD PRODUCT CLICK FOR CLOSE MODAL ADD PRODUCT
+document.querySelector('.close-button-2').onclick = () => {
+    modalAdding.style.display = 'none';
+}
