@@ -586,6 +586,84 @@ footer .credit a {
     margin-top: 1rem;
 }
 
+/* MDOAL ADD PRODUCT PIN */
+.modal-2 {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 1, 1, 0.8);
+}
+
+.modal-container-2 {
+    position: relative;
+    background-color: rgba(1, 1, 1, 0.8);
+    color: var(--wht);
+    margin: 15% auto;
+    padding: 1rem;
+    border: 2px solid var(--primary);
+    width: 30%;
+    animation: twingAnimation 1s;
+    border-radius: 2rem;
+}
+
+.modal-container-2 .close-button-2 {
+    position: absolute;
+    right: 1rem;
+    color: var(--wht);
+}
+
+.modal-container-2 .close-button-2:hover {
+    color: var(--primary);
+}
+
+.modal-content-2 {
+    text-align: center;
+}
+
+.modal-content-2 h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content-2 form {
+    text-align: center;
+}
+
+.modal-content-2 form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.modal-content-2 form input {
+    width: 70%;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    background: none;
+    color: var(--wht);
+}
+
+.modal-content-2 form button {
+    background-color: var(--primary);
+    color: var(--wht);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-content-2 form button:hover {
+    background-color: var(--grey);
+}
+
 /* ANIMATION */
 @keyframes twingAnimation {
     from {
@@ -700,6 +778,10 @@ footer .credit a {
 
     .modal-content {
         flex-wrap: wrap;
+    }
+
+    .modal-container-2 {
+        width: 50%;
     }
 }
 
