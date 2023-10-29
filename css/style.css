@@ -607,6 +607,7 @@ footer .credit a {
     padding: 1rem;
     border: 2px solid var(--primary);
     width: 30%;
+    height: 50%;
     animation: twingAnimation 1s;
     border-radius: 2rem;
 }
@@ -822,6 +823,10 @@ footer .credit a {
 
     .modal-container-2 {
         width: 50%;
+    }
+
+    .modal-content-3 {
+        flex-wrap: wrap;
     }
 }
 
