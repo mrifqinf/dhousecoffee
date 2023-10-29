@@ -67,6 +67,7 @@ const modalAdding = document.querySelector('#addproduct-modal');
 const buttonAdding = document.querySelector('.addproduct-modal');
 const pinAdding = document.querySelector('#pin');
 buttonAdding.onclick = () => {
+    event.preventDefault();
     modalAdding.style.display = 'flex';
     pinAdding.focus();
 }
