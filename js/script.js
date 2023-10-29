@@ -69,7 +69,6 @@ const pinAdding = document.querySelector('#pin');
 buttonAdding.onclick = () => {
     modalAdding.style.display = 'flex';
     pinAdding.focus();
-    event.preventDefault();
 }
 
 // JS FOR MODAL ADD PRODUCT CLICK FOR CLOSE MODAL ADD PRODUCT PIN
