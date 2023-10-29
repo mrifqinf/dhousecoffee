@@ -62,14 +62,38 @@ document.querySelector('.close-button').onclick = (e) => {
     modalDetail.style.display = 'none';
 }
 
-// JS FOR MODAL ADD PRODUCT CLICK FOR OPEN MODAL ADD PRODUCT
+// JS FOR MODAL ADD PRODUCT CLICK FOR OPEN MODAL ADD PRODUCT PIN
 const modalAdding = document.querySelector('#addproduct-modal');
 const buttonAdding = document.querySelector('.addproduct-modal');
+const pinAdding = document.querySelector('#pin');
 buttonAdding.onclick = () => {
     modalAdding.style.display = 'flex';
+    pinAdding.focus();
+}
+
+// JS FOR MODAL ADD PRODUCT CLICK FOR CLOSE MODAL ADD PRODUCT PIN
+document.querySelector('.close-button-2').onclick = () => {
+    modalAdding.style.display = 'none';
+}
+
+// JS FOR MODAL ADD PRODUCT CLICK FOR OPEN MODAL ADD PRODUCT
+const modalAddProduct = document.querySelector('#addproduct-modal-2');
+const buttonAddProduct = document.querySelector('#buttonSubmitAdd');
+buttonAddProduct.onclick = () => {
+    if (pinAdding.value.trim() === "1234") {
+        modalAddProduct.style.display = 'flex';
+        modalAdding.style.display = 'none';
+        event.preventDefault();
+        pinAdding.value = '';
+    } else {
+        alert("Wrong PIN, please try again");
+        event.preventDefault();
+        pinAdding.value = '';
+        pinAdding.focus();
+    }
 }
 
 // JS FOR MODAL ADD PRODUCT CLICK FOR CLOSE MODAL ADD PRODUCT
-document.querySelector('.close-button-2').onclick = () => {
-    modalAdding.style.display = 'none';
+document.querySelector('.close-button-3').onclick = () => {
+    modalAddProduct.style.display = 'none';
 }
