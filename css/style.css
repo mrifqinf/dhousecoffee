@@ -664,6 +664,46 @@ footer .credit a {
     background-color: var(--grey);
 }
 
+/* MODAL ADD PRODUCT */
+.modal-3 {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 1, 1, 0.8);
+}
+
+.modal-container-3 {
+    position: relative;
+    background-color: rgba(1, 1, 1, 0.8);
+    color: var(--wht);
+    margin: 15% auto;
+    padding: 1rem;
+    border: 2px solid var(--primary);
+    width: 70%;
+    animation: twingAnimation 1s;
+    border-radius: 2rem;
+}
+
+.modal-container-3 .close-button-3 {
+    position: absolute;
+    right: 1rem;
+    color: var(--wht);
+}
+
+.modal-container-3 .close-button-3:hover {
+    color: var(--primary);
+}
+
+.modal-content-3 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 /* ANIMATION */
 @keyframes twingAnimation {
     from {
