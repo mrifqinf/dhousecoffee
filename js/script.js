@@ -1,3 +1,14 @@
+window.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        modalAdding.style.display = 'none';
+        modalDetail.style.display = 'none';
+        modalAddProduct.style.display = 'none';
+        navbarNav.classList.remove('active');
+        searchForm.classList.remove('active');
+        shoppingCart.classList.remove('active');
+    }
+});
+
 // JS FOR HMENU CLICK FOR OPEN SIDEBAR
 const navbarNav = document.querySelector('.navbar-nav');
 document.querySelector('#hmenu').onclick = () => {
@@ -67,7 +78,6 @@ const modalAdding = document.querySelector('#addproduct-modal');
 const buttonAdding = document.querySelector('.addproduct-modal');
 const pinAdding = document.querySelector('#pin');
 buttonAdding.onclick = () => {
-    event.preventDefault();
     modalAdding.style.display = 'flex';
     pinAdding.focus();
 }
