@@ -860,6 +860,10 @@ footer .credit a {
     .modal-container-2 {
         width: 50%;
     }
+
+    .modal-content-3 {
+        flex-wrap: wrap;
+    }
 }
 
 /* MOBILE PHONE */
