@@ -304,7 +304,7 @@
         <a class="addproduct-modal" href="javascript:void(0);">
             <div class="add-product">
                 <i data-feather="plus-circle"></i>
-                <h3>Add Product</h3>
+                <h3>Add</h3>
             </div>
         </a>
     </section>
@@ -403,17 +403,32 @@
         <div class="modal-container-3">
             <a class="close-button-3" href="javascript:void(0);"><i data-feather="x"></i></a>
             <div class="modal-content-3">
-                <img src="assets/images/product-items.jpg" alt="Espresso Beans">
+                <!-- <img src="assets/images/product-items.jpg" alt="Espresso Beans"> -->
                 <div class="product-content-3">
-                    <h3>Espresso Beans</h3>
-                    <p>Kualitas biji kopi, cara pemanggangan, dan teknik penyeduhan yang terbaik dalam menciptakan rasa
-                        khas dari Espresso.
-                        Biji kopi Espresso yang terbaik adalah inti dari penyajian Espresso yang luar biasa dan
-                        memuaskan.</p>
-                    <div class="product-price">
-                        Rp. 30,000.00-,
-                    </div>
-                    <a href="javascript:void(0);"><i data-feather="shopping-cart"></i><span>Add to Cart</span></a>
+                    <h3>Add New Products</h3>
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="input-group">
+                                <label for="productName">Name</label>
+                                <input type="text" id="productName" placeholder="Product Name" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="productPrice">Price</label>
+                                <input type="number" id="productPrice" placeholder="Product Price" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="productDesc">Description</label>
+                                <textarea id="productDesc" cols="30" rows="3" placeholder="Product Description"
+                                    required></textarea>
+                            </div>
+                            <div class="input-group">
+                                <label for="addImages">Product Picture</label>
+                                <input type="file" id="addImages" required>
+                            </div>
+                        </div>
+                    </form>
+                    <button type="submit" class="buttonSubmitAdd" name="input_product-validate"><i
+                            data-feather="plus"></i>Add products</button>
                 </div>
             </div>
         </div>
