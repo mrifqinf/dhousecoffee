@@ -90,9 +90,11 @@ document.querySelector('.close-button-2').onclick = () => {
 // JS FOR MODAL ADD PRODUCT CLICK FOR OPEN MODAL ADD PRODUCT
 const modalAddProduct = document.querySelector('#addproduct-modal-2');
 const buttonAddProduct = document.querySelector('#buttonSubmitAdd');
+const inputName = document.querySelector('#productName');
 buttonAddProduct.onclick = () => {
     if (pinAdding.value.trim() === "251004") {
         modalAddProduct.style.display = 'flex';
+        inputName.focus();
         modalAdding.style.display = 'none';
         event.preventDefault();
         pinAdding.value = '';
