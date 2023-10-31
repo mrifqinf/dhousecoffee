@@ -411,13 +411,17 @@ body {
     text-align: center;
     padding: 1rem;
     margin-top: 1rem;
-    border: 2px solid var(--grey);
+    border: 1px solid var(--grey);
     border-radius: 2rem;
     transition: 0.3s;
 }
 
 .products a .add-product:hover {
     background-color: var(--grey);
+}
+
+.products a .add-product h3 {
+    font-size: 1rem;
 }
 
 /* CONTACT SECTION */
@@ -526,7 +530,7 @@ footer .credit a {
     position: relative;
     background-color: rgba(1, 1, 1, 0.8);
     color: var(--wht);
-    margin: 15% auto;
+    margin: auto;
     padding: 1rem;
     border: 2px solid var(--primary);
     width: 70%;
@@ -603,7 +607,7 @@ footer .credit a {
     position: relative;
     background-color: rgba(1, 1, 1, 0.8);
     color: var(--wht);
-    margin: 15% auto;
+    margin: auto;
     padding: 1rem;
     border: 2px solid var(--primary);
     width: 30%;
@@ -679,10 +683,12 @@ footer .credit a {
 
 .modal-container-3 {
     position: relative;
+    display: flex;
+    justify-content: center;
     background-color: rgba(1, 1, 1, 0.8);
     color: var(--wht);
-    margin: 15% auto;
-    padding: 1rem;
+    margin: auto;
+    padding: 2rem;
     border: 2px solid var(--primary);
     width: 70%;
     animation: twingAnimation 1s;
@@ -711,14 +717,15 @@ footer .credit a {
     border-radius: 2rem;
 }
 
-.modal-content-3 p {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.7rem;
+.modal-content-3 h3 {
+    text-align: center;
+}
+
+.modal-content-3 form {
     margin-top: 1rem;
 }
 
-.modal-content-3 a {
+.modal-content-3 .buttonSubmitAdd {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -730,15 +737,43 @@ footer .credit a {
     padding: 1rem 0;
     border-radius: 2rem;
     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    cursor: pointer;
 }
 
-.modal-content-3 a:hover {
+.modal-content-3 .buttonSubmitAdd:hover {
     color: var(--bg);
 }
 
 .modal-3 .product-price-3 {
     font-weight: bold;
     margin-top: 1rem;
+}
+
+.modal-3 .modal-container-3 .modal-content-3 .row {
+    display: wrap;
+    margin-top: 1rem;
+}
+
+.modal-3 .modal-container-3 .modal-content-3 .row .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: var(--bg);
+    border: 1px solid #eee;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+}
+
+.modal-3 .modal-container-3 .modal-content-3 .row .input-group label {
+    margin-right: 1rem;
+}
+
+.modal-3 .modal-container-3 .modal-content-3 .row .input-group input,
+.modal-3 .modal-container-3 .modal-content-3 .row .input-group textarea {
+    width: 100%;
+    font-size: 1rem;
+    background: none;
+    color: var(--wht);
 }
 
 /* ANIMATION */
@@ -859,6 +894,10 @@ footer .credit a {
 
     .modal-container-2 {
         width: 50%;
+    }
+
+    .modal-container-3 {
+        height: auto;
     }
 
     .modal-content-3 {
