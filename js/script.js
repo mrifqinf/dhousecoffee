@@ -91,7 +91,7 @@ document.querySelector('.close-button-2').onclick = () => {
 const modalAddProduct = document.querySelector('#addproduct-modal-2');
 const buttonAddProduct = document.querySelector('#buttonSubmitAdd');
 buttonAddProduct.onclick = () => {
-    if (pinAdding.value.trim() === "0000") {
+    if (pinAdding.value.trim() === "251004") {
         modalAddProduct.style.display = 'flex';
         modalAdding.style.display = 'none';
         event.preventDefault();
