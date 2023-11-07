@@ -97,7 +97,7 @@ const modalAddProduct = document.querySelector('#addproduct-modal-2'); // MODAL 
 const buttonAdding = document.querySelector('.addproduct-modal'); // BUTTON OPEN PIN VALIDATION
 const buttonAddProduct = document.querySelector('#buttonSubmitAdd'); // BUTTON PIN VALIDATION
 // ALL OTHERS VARIABLES 
-const registeredPins = ['1234', '5678', '9876', '5432'];
+const registeredPins = ['0001', '251004', '777'];
 
 // OPEN PIN MODAL FUNCTIONS
 buttonAdding.onclick = () => {
